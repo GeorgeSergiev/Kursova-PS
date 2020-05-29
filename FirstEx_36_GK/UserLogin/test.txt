@@ -1,0 +1,11 @@
+3/7/2020 4:49:24 PM;Unknown;ANONYMOUS;Invalid Credentials
+3/7/2020 4:49:26 PM;Unknown;ANONYMOUS;Username must 5 or more symbols
+3/7/2020 5:13:03 PM;Unknown;ANONYMOUS;Username must be filled
+3/7/2020 5:14:12 PM;Unknown;ANONYMOUS;Username must be filled
+3/7/2020 5:15:35 PM;Unknown;ANONYMOUS;Username must be filled
+3/7/2020 5:15:55 PM;Unknown;ANONYMOUS;Username must be filled
+3/7/2020 5:16:13 PM;Unknown;ANONYMOUS;Username must be filled
+3/7/2020 5:16:13 PM;Unknown;ANONYMOUS;Login limit reached
+5/7/2020 4:16:27 PM;Georgi;ADMIN;Successful Login
+5/7/2020 4:19:00 PM;Georgi;ADMIN;Successful Login
+5/7/2020 4:21:48 PM;Georgi;ADMIN;Successful Login

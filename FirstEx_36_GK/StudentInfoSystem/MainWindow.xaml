@@ -1,0 +1,75 @@
+﻿<Window x:Class="StudentInfoSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentInfoSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+
+
+
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="513,44,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ClearInputsCommand}"/>
+        <Button x:Name="btnFill" Content="Fill" HorizontalAlignment="Left" Margin="513,81,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PopulateInputsCommand}"/>
+        <Button Content="Make Inactive" HorizontalAlignment="Left" Margin="635,44,0,0" VerticalAlignment="Top" Width="75" Command="{Binding DisableInputsCommand}"/>
+        <GroupBox Header="Personal Info" HorizontalAlignment="Left" Height="138" Margin="89,10,0,0" VerticalAlignment="Top" Width="339">
+            <Grid Margin="10,0,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="lblMName" Content="Middle Name" HorizontalAlignment="Left"  VerticalAlignment="Top"  Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="lblLName" Content="Last Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Row="2" Grid.Column="0"/>
+                <TextBox x:Name="txtName" HorizontalAlignment="Center" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="0" Grid.Column="0" Text="{Binding CurrentStudent.Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtMName" HorizontalAlignment="Center" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="0" Text="{Binding CurrentStudent.MiddleName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtLName" HorizontalAlignment="Center" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.Column="0" Text="{Binding CurrentStudent.LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Student Info" HorizontalAlignment="Left" Height="248" Margin="89,148,0,0" VerticalAlignment="Top" Width="576">
+            <Grid Margin="10,0,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="txtCourse" HorizontalAlignment="Left" Height="23" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CurrentStudent.Course, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtYear" HorizontalAlignment="Left" Height="23" Grid.Row="0" Grid.Column="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.767,0.783" Text="{Binding CurrentStudent.Year, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtDegree" HorizontalAlignment="Left" Height="23" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CurrentStudent.Degree, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtFlow" HorizontalAlignment="Left" Height="23" Grid.Row="1" Grid.Column="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CurrentStudent.Flow, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtStatus" HorizontalAlignment="Left" Height="23" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CurrentStudent.Status, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtFacNum" HorizontalAlignment="Left" Height="23" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,11.957" Text="{Binding CurrentStudent.FacNum, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtGroup" HorizontalAlignment="Left" Height="23" Grid.Row="2" Grid.Column="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CurrentStudent.Group, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <TextBox x:Name="txtFaculty" HorizontalAlignment="Left" Height="23" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CurrentStudent.Faculty, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <Label Content="Course" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"/>
+                <Label Content="Year" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="2" VerticalAlignment="Top"/>
+                <Label Content="Degree" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top"/>
+                <Label Content="Flow" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top"/>
+                <Label Content="Status" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" />
+                <Label Content="Faculty Number" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="0" VerticalAlignment="Top"/>
+                <Label Content="Group" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="2" VerticalAlignment="Top"/>
+                <Label Content="Faculty" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        
+
+    </Grid>
+</Window>
